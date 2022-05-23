@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf</title>
+</head>
+<body>
+<h2>User details</h2>
+<!-- Details user information  -->
+<form action="/" th:object="${user}" >
+    <input type="hidden" name="userId" th:value="*{userId}" />
+    <input type="text" name="username" th:value="*{username}" />
+    <input type="text" name="password" th:value="*{password}" />
+</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Thymeleaf</title>
+</head>
+<body>
+	<h2>user list</h2>
+	<div th:each="user:${userList}">
+		<input type="hidden" name="userId" th:value="${user.userId}" /> login
+		password: <input type="text" name="password"
+			th:value="${user.username}" /> username: <input type="text"
+			name="username" th:value="${user.password}" />
+	</div>
+	<a href="/user">Query a single user</a>
+</body>
+</html>
